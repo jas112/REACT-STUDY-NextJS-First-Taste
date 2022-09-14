@@ -23,11 +23,10 @@ const Index = ({ posts }) => {
 }
 
 Index.getInitialProps = async () => {
-    // https://jsonplaceholder.typicode.com/posts
-    console.log(`Retrieving data....@Index getInitialProps Functional`);
+    // console.log(`Retrieving data....@Index getInitialProps Functional`);
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
     const {data} = res;
-    console.log(data);
+    // console.log(data);
     return {posts: data};
 }
 
